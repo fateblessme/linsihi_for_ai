@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+</head>
+<body>
+<div class="together pc">
+	<div class="main">
+		<div class="center">
+			<div class="main_top">
+				<span>4</span>
+				<img src="../../wstmart/home/view/default/img/404_03.png">
+				<span>4</span>
+			</div>
+			<p>您访问的页面去别的星球了</p>
+			<div class="main_bottom">
+				<a href="../../index.html">
+					<img src="../../wstmart/home/view/default/img/icon_03.png">
+					<span><v id="djstimes1">3</v>秒后返回主页</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wap">
+	<img src="../../wstmart/home/view/default/img/404wap.jpg" class="first">
+	<div class="main1">
+		<div class="center1">
+			<div class="main_top1">
+				<span>4</span>
+				<img src="../../wstmart/home/view/default/img/404_03.png">
+				<span>4</span>
+			</div>
+			<p>您访问的页面去别的星球了</p>
+			<div class="main_bottom1">
+				<a href="../../index.html">
+					<img src="../../wstmart/home/view/default/img/icon_03.png">
+					<span><v id="djstimes2">3</v>秒后返回主页</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="https://www.cv-hd.cn/wstmart/home/view/default/js/jquery-1.11.3.js"></script>
+<script>
+	daojishi();
+	function daojishi() {
+		var hander = setInterval(function () {
+			var djstime = $("#djstimes1").text();
+			djstime = parseInt(djstime);
+			djstime--;
+			$("#djstimes1").text(djstime);
+			$("#djstimes2").text(djstime);
+			if(djstime<=0){
+				clearInterval(hander); //清除倒计时
+				location.href= '/';
+			}
+
+		}, 1000);
+	}
+</script>
+
+
+
+
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	img{
+		max-width: 100%;
+		vertical-align: bottom;
+		vertical-align: top;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	body a{
+		text-decoration: none;
+	}
+	.together{
+		background: url(../../wstmart/home/view/default/img/404.jpg) no-repeat center center;
+		height: 100%;
+	}
+	.center{
+		width: 100%;
+		position: absolute;
+		bottom: 13%;
+		text-align: center;
+	}
+	.main_top span{
+		font-size: 301px;
+		color: #fff;
+	}
+	.main_top img{
+		margin-top: 106px;
+	}
+	.pc p{
+		color: #fff;
+		font-size: 28px;
+		margin-bottom: 58px;
+	}
+	.main_bottom a{
+		background: #d26a27;
+		padding: 15px 40px;
+		border-radius: 25px;
+	}
+	.main_bottom a span{
+		color: #fff;
+		font-size: 20px;
+	}
+	.pc{
+		display: block;
+	}
+	.wap{
+		display: none;
+	}
+	@media screen and (max-width: 1024px) {
+		.pc{
+			display: none;
+		}
+		.wap{
+			display: block;
+		}
+		.first{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.wap {
+		position: relative;
+	}
+
+	.main1 {
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		bottom: 12%;
+	}
+
+	.main_top1 span {
+		font-size: 150px;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	.main_top1 img {
+		width: 30%;
+		margin-top: 50px;
+	}
+
+	.wap p {
+		font-size: 18px;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+
+	.main_bottom1 a {
+		background: #d26a27;
+		padding: 10px 25px;
+		border-radius: 25px;
+	}
+
+	.main_bottom1 a span {
+		color: #fff;
+		font-size: 18px;
+	}
+</style>
